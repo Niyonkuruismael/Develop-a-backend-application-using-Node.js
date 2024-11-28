@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Students by Grade</title>
+</head>
+<body>
+
+<h2>Filter Students by Grade</h2>
+<p>Enter grade threshold:</p>
+<input type="number" id="gradeThreshold" placeholder="Enter grade threshold">
+<button onclick="filterStudents()">Filter</button>
+
+<p id="result"></p>
+
+<script>
+// Array of student objects
+const students = [
+    { name: "John", age: 18, grade: 85 },
+    { name: "Jane", age: 17, grade: 92 },
+    { name: "Jim", age: 19, grade: 78 },
+    { name: "Jill", age: 18, grade: 95 },
+    { name: "Jack", age: 17, grade: 67 }
+];
+
+// Function to filter students by grade
+const filterStudents = () => {
+    const threshold = document.getElementById("gradeThreshold").value;
+    const filteredStudents = students.filter(student => student.grade > threshold);
+    const studentNames = filteredStudents.map(student => student.name);
+    document.getElementById("result").innerHTML = "Students with grades above " + threshold + ": " + studentNames.join(", ");
+}
+</script>
+
+</body>
+</html>
