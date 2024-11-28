@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Array</title>
+</head>
+<body>
+
+<h2>Sum of Array of Numbers</h2>
+<p>Enter numbers separated by commas:</p>
+<input type="text" id="numberInput" placeholder="e.g., 1,2,3,4,5">
+<button onclick="sumArray()">Calculate Sum</button>
+
+<p id="result"></p>
+
+<script>
+function sumArray() {
+    // Get the input value
+    var input = document.getElementById("numberInput").value;
+
+    // Convert input to an array of numbers
+    var numbers = input.split(',').map(Number);
+
+    // Calculate the sum of the numbers
+    var sum = numbers.reduce((total, num) => total + num, 0);
+
+    // Display the result
+    document.getElementById("result").innerHTML = "Sum: " + sum;
+}
+
+// Test the function with different arrays
+document.write("Sum of [1, 2, 3, 4, 5]: " + sumArrayTest([1, 2, 3, 4, 5]) + "<br>");
+document.write("Sum of [10, 20, 30, 40, 50]: " + sumArrayTest([10, 20, 30, 40, 50]) + "<br>");
+document.write("Sum of [0, -1, -2, -3, -4]: " + sumArrayTest([0, -1, -2, -3, -4]) + "<br>");
+document.write("Sum of [100]: " + sumArrayTest([100]) + "<br>");
+document.write("Sum of []: " + sumArrayTest([]) + "<br>");
+
+// Helper function to test sumArray with different arrays
+function sumArrayTest(arr) {
+    return arr.reduce((total, num) => total + num, 0);
+}
+</script>
+
+</body>
+</html>
