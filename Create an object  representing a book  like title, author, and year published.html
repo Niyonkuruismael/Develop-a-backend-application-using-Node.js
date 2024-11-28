@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Object Example</title>
+</head>
+<body>
+
+<h2>Book Information</h2>
+<p id="bookInfo"></p>
+
+<script>
+    // Create a book object
+    var book = {
+        title: "To Kill a Mockingbird",
+        author: "Harper Lee",
+        yearPublished: 1960
+    };
+
+    // Display the book information
+    document.getElementById("bookInfo").innerHTML = 
+        "Title: " + book.title + "<br>" + 
+        "Author: " + book.author + "<br>" + 
+        "Year Published: " + book.yearPublished;
+</script>
+
+</body>
+</html>
