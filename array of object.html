@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Filter Students by Grade</h2>
+<p>Grade threshold: <input type="number" id="gradeThreshold" placeholder="Enter grade"><button onclick="filterStudents()">Filter</button></p>
+<p id="result"></p>
+
+<script>
+var students = [{name: "John", age: 18, grade: 85}, {name: "Jane", age: 17, grade: 92}, {name: "Jim", age: 19, grade: 78}, {name: "Jill", age: 18, grade: 95}, {name: "Jack", age: 17, grade: 67}];
+
+function filterStudents() {
+    var threshold = document.getElementById("gradeThreshold").value;
+    var filtered = students.filter(student => student.grade > threshold).map(student => student.name);
+    document.getElementById("result").innerHTML = "Students: " + filtered.join(", ");
+}
+</script>
+
+</body>
+</html>
