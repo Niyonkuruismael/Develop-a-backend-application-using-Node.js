@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calculate Square</h2>
+<p>Enter a number:</p>
+<input type="number" id="numberInput" placeholder="Enter a number">
+<button onclick="calculateSquare()">Calculate Square</button>
+
+<p id="result"></p>
+
+<script>
+function calculateSquare() {
+    var num = document.getElementById("numberInput").value;
+    var square = num * num;
+    document.getElementById("result").innerHTML = "Square: " + square;
+}
+</script>
+
+</body>
+</html>
