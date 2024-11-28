@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destructuring Example</title>
+</head>
+<body>
+
+<h2>Object and Array Destructuring</h2>
+<p>Check the console for output.</p>
+
+<script>
+// Example of object destructuring
+const student = {
+    name: "Alice",
+    age: 20,
+    grade: "A"
+};
+
+const { name, age, grade } = student;
+
+console.log("Object Destructuring:");
+console.log("Name:", name);
+console.log("Age:", age);
+console.log("Grade:", grade);
+
+// Example of array destructuring
+const numbers = [1, 2, 3, 4, 5];
+
+const [first, second, third] = numbers;
+
+console.log("Array Destructuring:");
+console.log("First:", first);
+console.log("Second:", second);
+console.log("Third:", third);
+</script>
+
+</body>
+</html>
